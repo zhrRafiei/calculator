@@ -9,6 +9,7 @@ from .models import histoy
 
 # Create your views here.
 class CalculatorAPIView(APIView):
+    histoy.objects.all().delete()
 
     def post(self, request):
         history = request.data.get("history")
